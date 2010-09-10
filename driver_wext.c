@@ -2563,7 +2563,7 @@ static int wpa_driver_priv_driver_cmd(void *priv, char *cmd, char *buf, size_t b
 	if ((ret = ioctl(drv->ioctl_sock, SIOCSIWPRIV, &iwr)) < 0) {
 		perror("ioctl[SIOCSIWPRIV]");
 	}
-
+ret=0;
 	if (ret < 0) {
 		wpa_printf(MSG_ERROR, "%s failed", __func__);
 		drv->errors++;
